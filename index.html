@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos Explorer | Uma Jornada Pelo Universo</title>
+
+    <!-- Fontes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <!-- Particles.js para efeito de estrelas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <!-- Particles.js Container para background de estrelas -->
+    <div id="particles-js" class="particles-container"></div>
+
+    <!-- Navbar com efeito de vidro -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-glass">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/icons/rocket-icon.svg"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          Cosmos Explorer
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sistema-solar">Sistema Solar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#estrelas">Estrelas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galaxias">Galáxias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#fenomenos">Fenômenos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link special-link" href="#explorar">Explorar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section com Parallax -->
+    <header class="hero-section">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center text-white">
+            <h1 class="display-1 mb-4" data-aos="fade-up">Cosmos Explorer</h1>
+            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
+              Embarque em uma jornada épica através das maravilhas do universo
+            </p>
+            <div
+              class="scroll-indicator"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="mouse">
+                <div class="wheel"></div>
+              </div>
+              <p>Role para explorar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Sistema Solar Section -->
+      <section id="sistema-solar" class="py-5 space-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">Sistema Solar</h2>
+          <div class="solar-system-container" data-aos="zoom-in">
+            <!-- Planetas serão adicionados via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Estrelas Section -->
+      <section id="estrelas" class="py-5 space-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">
+            Estrelas Fascinantes
+          </h2>
+          <div class="star-cards" id="starContainer">
+            <!-- Cards de estrelas serão adicionados via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Galáxias Section -->
+      <section id="galaxias" class="py-5 space-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">
+            Galáxias do Universo
+          </h2>
+          <div class="galaxy-carousel" id="galaxyCarousel">
+            <!-- Carrossel de galáxias será adicionado via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Fenômenos Section -->
+      <section id="fenomenos" class="py-5 space-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">
+            Fenômenos Cósmicos
+          </h2>
+          <div class="phenomena-grid" id="phenomenaContainer">
+            <!-- Grid de fenômenos será adicionado via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Explorar -->
+      <section id="explorar" class="py-5 space-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">
+            Exploração Interativa
+          </h2>
+          <div class="interactive-space" id="interactiveSpace">
+            <!-- Conteúdo interativo será adicionado via JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer com efeito de vidro -->
+    <footer class="footer-glass py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start">
+            <h5>Cosmos Explorer</h5>
+            <p>Explorando as maravilhas do universo</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h5>Links Rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="#sistema-solar">Sistema Solar</a></li>
+              <li><a href="#estrelas">Estrelas</a></li>
+              <li><a href="#galaxias">Galáxias</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <h5>Redes Sociais</h5>
+            <div class="social-links">
+              <!-- Ícones de redes sociais -->
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              &copy; 2024 Cosmos Explorer. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

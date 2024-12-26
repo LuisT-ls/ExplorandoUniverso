@@ -20,6 +20,67 @@
   }
 }
 
+@keyframes systemRotate {
+  from {
+    transform: rotateX(60deg) rotateZ(0);
+  }
+  to {
+    transform: rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbitFade {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@keyframes earthGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(100, 200, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(100, 200, 255, 0.8));
+  }
+}
+
+/* Velocidades das órbitas */
+.orbit-fast {
+  animation: orbit 20s linear infinite;
+}
+.orbit-medium {
+  animation: orbit 35s linear infinite;
+}
+.orbit-slow {
+  animation: orbit 50s linear infinite;
+}
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
 /* Star Twinkle Animation */
 @keyframes twinkle {
   0%,
@@ -101,17 +162,4 @@
 
 .pulse {
   animation: pulse 2s infinite;
-}
-
-/* Orbit Speeds */
-.orbit-slow {
-  animation: orbit 30s linear infinite;
-}
-
-.orbit-medium {
-  animation: orbit 20s linear infinite;
-}
-
-.orbit-fast {
-  animation: orbit 10s linear infinite;
 }

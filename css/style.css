@@ -536,27 +536,11 @@ h5 {
 /* Carousel Navigation */
 .galaxy-navigation {
   position: absolute;
-  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.nav-button {
-  background: var(--accent-color);
-  border: none;
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 10;
-}
-
-.nav-button:hover {
-  background: var(--primary-color);
 }
 
 .galaxy-indicators {

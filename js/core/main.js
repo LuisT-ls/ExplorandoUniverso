@@ -11,30 +11,73 @@ import {
   initializeSmoothScroll
 } from '../utils/navigation.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100,
-    easing: 'ease-out-cubic'
-  })
+const isDevelopment = true // Definir como false em produção
 
-  // Inicializar elementos da cena espacial
-  initializeParticles()
-  initializeInteractiveSpace()
+document.addEventListener('DOMContentLoaded', async () => {
+  if (isDevelopment) {
+    console.log('Modo de Desenvolvimento Ativado')
+  }
 
-  // Inicializar sistema solar
-  initializeSolarSystem()
+  try {
+    // Inicializar animações AOS
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+      })
+    } else {
+      console.warn('Biblioteca AOS não carregada!')
+    }
 
-  // Inicializar corpos celestes
-  initializeStarCards()
-  initializeGalaxyCarousel()
-  initializePhenomena()
+    // Inicializar elementos da cena espacial
+    try {
+      initializeParticles()
+      initializeInteractiveSpace()
+      if (isDevelopment) {
+        console.log('Cena espacial inicializada com sucesso.')
+      }
+    } catch (error) {
+      console.error('Erro ao inicializar a cena espacial:', error)
+    }
 
-  // Inicializar navegação e efeitos
-  initializeNavigationEffects()
-  initializeParallaxEffects()
-  initializeSmoothScroll()
+    // Inicializar sistema solar
+    try {
+      initializeSolarSystem()
+      if (isDevelopment) {
+        console.log('Sistema solar inicializado.')
+      }
+    } catch (error) {
+      console.error('Erro ao inicializar o sistema solar:', error)
+    }
+
+    // Inicializar corpos celestes
+    try {
+      initializeStarCards()
+      initializeGalaxyCarousel()
+      initializePhenomena()
+      if (isDevelopment) {
+        console.log('Corpos celestes inicializados.')
+      }
+    } catch (error) {
+      console.error('Erro ao inicializar corpos celestes:', error)
+    }
+
+    // Inicializar navegação e efeitos
+    try {
+      initializeNavigationEffects()
+      initializeParallaxEffects()
+      initializeSmoothScroll()
+      if (isDevelopment) {
+        console.log('Efeitos de navegação inicializados.')
+      }
+    } catch (error) {
+      console.error('Erro ao inicializar efeitos de navegação:', error)
+    }
+  } catch (globalError) {
+    console.error('Erro global durante a inicialização:', globalError)
+  }
 })
 
 export default {}

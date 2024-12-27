@@ -1,14 +1,25 @@
 .star-image-container {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .star-image {
   width: 100px;
   height: 100px;
+  object-fit: cover; /* Garante que a proporção da imagem seja mantida */
   border-radius: 50%;
   border: 3px solid var(--accent-color);
   box-shadow: 0 0 20px rgba(76, 201, 240, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s; /* Efeitos ao passar o mouse */
+}
+
+.star-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(76, 201, 240, 0.8);
 }
 
 .star-glow {
@@ -20,23 +31,38 @@
   border-radius: 50%;
   background: radial-gradient(circle, rgba(76, 201, 240, 0.5), transparent);
   animation: starPulse 2s infinite alternate;
+  pointer-events: none; /* Garante que o hover afete apenas a imagem */
 }
 
 .star-content h3 {
   font-size: 1.5rem;
   color: var(--accent-color);
+  margin: 0.5rem 0;
+  text-shadow: 0 0 5px rgba(76, 201, 240, 0.7);
 }
 
 .star-type {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-color);
-  margin-bottom: 1rem;
-  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
 }
 
 .star-info p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
 }

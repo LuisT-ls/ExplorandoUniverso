@@ -33,21 +33,6 @@ export function initializeNavigationEffects() {
   })
 }
 
-// Event listener para smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute('href'))
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
-  })
-})
-
 export function initializeParallaxEffects() {
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset
@@ -66,4 +51,19 @@ export function initializeParallaxEffects() {
   })
 }
 
-initializeParallaxEffects()
+// Função para scroll suave
+export function initializeSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      const target = document.querySelector(this.getAttribute('href'))
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    })
+  })
+}

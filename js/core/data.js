@@ -79,9 +79,17 @@ const spaceData = {
       distance: '642.5 anos-luz',
       description: 'Uma das maiores estrelas conhecidas',
       image: 'assets/images/estrelas/betelgeuse.jpg'
+    },
+    {
+      name: 'Vega',
+      type: 'Estrela Branca-Azulada',
+      distance: '25 anos-luz',
+      description:
+        'Uma das estrelas mais brilhantes do hemisfério norte, parte da constelação de Lira',
+      image: 'assets/images/estrelas/vega.jpg'
     }
   ],
-
+  
   galaxies: [
     {
       name: 'Via Láctea',

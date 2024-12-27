@@ -1,0 +1,44 @@
+/* Tooltip avançado */
+.planet-tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  width: 280px;
+  transform: translateX(-50%) scale(0);
+  background: rgba(0, 0, 0, 0.95);
+  padding: 1.5rem;
+  border-radius: 15px;
+  color: white;
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.planet-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.95);
+}
+
+.planet-tooltip h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.planet-tooltip p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

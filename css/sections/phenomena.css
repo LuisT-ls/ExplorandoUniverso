@@ -1,0 +1,54 @@
+/* Informações do fenômeno */
+.phenomenon-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 70%,
+    transparent 100%
+  );
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar informações no hover */
+.phenomenon-card:hover .phenomenon-info {
+  transform: translateY(0);
+}
+
+/* Estilos do texto */
+.phenomenon-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.phenomenon-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Tipo do fenômeno */
+.phenomenon-info p:first-of-type {
+  color: #00ffcc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* Interactive Space */
+.interactive-space {
+  height: 600px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  padding: 2rem;
+}

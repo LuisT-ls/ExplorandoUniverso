@@ -1,0 +1,193 @@
+/* Space Sections */
+.space-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container principal com perspectiva 3D */
+.solar-system-container {
+  position: relative;
+  height: 900px;
+  margin: 50px auto;
+  max-width: 1400px;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+/* Sistema solar com rotação suave */
+.solar-system {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: systemRotate 100s linear infinite;
+}
+
+/* Sol aprimorado */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fff6e9,
+    #ffd700 20%,
+    #ff8c00 40%,
+    #ff4500 60%
+  );
+  box-shadow: 0 0 60px #ff4500, 0 0 120px rgba(255, 69, 0, 0.4),
+    0 0 200px rgba(255, 165, 0, 0.2);
+  animation: sunPulse 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* Órbitas com efeito de profundidade */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: orbitFade 8s linear infinite;
+}
+
+/* Planetas com efeitos 3D */
+.planet {
+  position: absolute;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.planet-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.planet img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+/* Tamanhos e características específicas dos planetas */
+.planet[data-name='Mercúrio'] {
+  width: 25px;
+  height: 25px;
+  filter: sepia(0.3);
+}
+
+.planet[data-name='Vênus'] {
+  width: 40px;
+  height: 40px;
+  filter: brightness(1.2);
+}
+
+.planet[data-name='Terra'] {
+  width: 45px;
+  height: 45px;
+  animation: earthGlow 4s infinite;
+}
+
+.planet[data-name='Marte'] {
+  width: 35px;
+  height: 35px;
+  filter: hue-rotate(10deg);
+}
+
+.planet[data-name='Júpiter'] {
+  width: 85px;
+  height: 85px;
+  filter: contrast(1.2);
+}
+
+.planet[data-name='Saturno'] {
+  width: 75px;
+  height: 75px;
+  filter: brightness(1.3);
+}
+
+.planet[data-name='Urano'] {
+  width: 55px;
+  height: 55px;
+  filter: hue-rotate(-10deg);
+}
+
+.planet[data-name='Netuno'] {
+  width: 50px;
+  height: 50px;
+  filter: brightness(1.4);
+}
+
+/* Estatísticas do planeta */
+.planet-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stat-value {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Efeitos de hover aprimorados */
+.planet:hover {
+  z-index: 10;
+}
+
+.planet:hover .planet-wrapper {
+  transform: scale(1.5) translateZ(50px);
+}
+
+.planet:hover img {
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.5));
+}
+
+.planet:hover .planet-tooltip {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+/* Controles de visualização */
+.solar-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

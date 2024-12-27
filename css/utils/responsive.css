@@ -1,0 +1,72 @@
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .solar-system-container {
+    height: 700px;
+  }
+
+  .sun {
+    width: 100px;
+    height: 100px;
+  }
+
+  .planet[data-name='Mercúrio'] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .planet[data-name='Vênus'] {
+    width: 30px;
+    height: 30px;
+  }
+
+  .planet[data-name='Terra'] {
+    width: 30px;
+    height: 30px;
+  }
+
+  .planet[data-name='Marte'] {
+    width: 25px;
+    height: 25px;
+  }
+
+  .planet[data-name='Jupiter'] {
+    width: 50px;
+    height: 50px;
+  }
+
+  .planet[data-name='Saturno'] {
+    width: 45px;
+    height: 45px;
+  }
+
+  .planet[data-name='Urano'] {
+    width: 40px;
+    height: 40px;
+  }
+
+  .planet[data-name='Netuno'] {
+    width: 35px;
+    height: 35px;
+  }
+
+  .galaxy-image-container {
+    height: 200px;
+  }
+
+  .nav-button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .galaxy-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .galaxy-info p {
+    font-size: 0.8rem;
+  }
+
+  .special-link {
+    margin: 10px 0;
+  }
+}

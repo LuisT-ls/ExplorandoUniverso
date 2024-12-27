@@ -1,0 +1,21 @@
+/* Scroll Indicator */
+.mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid var(--text-color);
+  border-radius: 13px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--text-color);
+  border-radius: 2px;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}

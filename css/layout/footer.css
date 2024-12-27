@@ -1,0 +1,16 @@
+/* Footer */
+.footer-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-glass a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-glass a:hover {
+  color: var(--accent-color);
+}
